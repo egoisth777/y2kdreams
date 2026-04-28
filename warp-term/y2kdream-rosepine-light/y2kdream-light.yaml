@@ -1,0 +1,38 @@
+name: 'y2kdream-rosepine'
+
+############################################################### SEE BELOW
+background_image:
+  # the path is relative to ~/.warp/themes/
+  # the full path to the picture is: ~/.warp/themes/warp.jpg
+  path: y2kdream/1.jpg
+  # the opacity value is required and can range from 0-100
+  opacity: 5
+############################################################### SEE ABOVE
+
+
+accent: 
+  left: "#008b0c"
+  right: "#a018ff"
+background: "#fbeff6"
+foreground: "#000000"
+cursor: "#f40064"
+details: darker
+terminal_colors:
+  normal:
+    black: "#7b8496"
+    red: "#d11500"
+    green: "#008b0c"
+    yellow: "#997b00"
+    blue: "#0057d1"
+    magenta: "#a018ff"
+    cyan: "#008c99"
+    white: "#f40064"
+  bright:
+    black: "#7b8496"
+    red: "#d11500"
+    green: "#008b0c"
+    yellow: "#997b00"
+    blue: "#0057d1"
+    magenta: "#a018ff"
+    cyan: "#008c99"
+    white: "#f40064"

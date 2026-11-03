@@ -1,0 +1,32 @@
+# y2kdream Euphoria — Lavender (Light)
+# Vibrant pixel-dreamscape variant — saturated y2k euphoria.
+# Drop this in: ~/.warp/themes/y2kdream-euphoria-lavender-light.yaml
+# Background image: place "euphoria-lavender.svg" in the same folder.
+
+name: 'y2kdream Euphoria Lavender Light'
+accent: '#8a5fd9'
+background: '#f5edfd'
+foreground: '#251a3a'
+details: 'lighter'
+background_image:
+  path: 'euphoria-lavender.svg'
+  opacity: 30
+terminal_colors:
+  normal:
+    black:   '#251a3a'
+    red:     '#ff5a7e'
+    green:   '#5fb874'
+    yellow:  '#e8a830'
+    blue:    '#4090c8'
+    magenta: '#b760e0'
+    cyan:    '#3fb8b8'
+    white:   '#ddd0ec'
+  bright:
+    black:   '#403060'
+    red:     '#ff7e98'
+    green:   '#7fce92'
+    yellow:  '#f5c252'
+    blue:    '#62acdc'
+    magenta: '#cb84e8'
+    cyan:    '#5fd2d2'
+    white:   '#f8f0fd'

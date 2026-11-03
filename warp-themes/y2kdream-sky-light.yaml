@@ -1,0 +1,32 @@
+# y2kdream — Sky (Light)
+# A dreamy, eye-friendly theme inspired by Y2K-era pastel computing.
+# Drop this in: ~/.warp/themes/sky-light.yaml
+# Background image: place "sky.svg" in the same folder.
+
+name: 'y2kdream Sky Light'
+accent: '#6c8db5'
+background: '#eff5fb'
+foreground: '#28303a'
+details: 'lighter'
+background_image:
+  path: 'sky.svg'
+  opacity: 35
+terminal_colors:
+  normal:
+    black:   '#28303a'
+    red:     '#c25d6e'
+    green:   '#7a9266'
+    yellow:  '#c8a455'
+    blue:    '#5a85b8'
+    magenta: '#a983b8'
+    cyan:    '#5fa0a0'
+    white:   '#d4dfeb'
+  bright:
+    black:   '#445165'
+    red:     '#d97a8a'
+    green:   '#94aa80'
+    yellow:  '#dfba6c'
+    blue:    '#7ea4cf'
+    magenta: '#c19fd0'
+    cyan:    '#7cbcbc'
+    white:   '#f0f6fc'

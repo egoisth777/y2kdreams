@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>y2kdream Euphoria — vibrant variant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#1d1830; --ink-2:#4d4565; --ink-3:#7d7595;
+    --paper:#fdf6ff; --paper-2:#f5ebfa; --line:rgba(80,40,120,.14);
+    --pop-1:#ff5a90; --pop-2:#ff7a47; --pop-3:#8a5fd9; --pop-4:#4090c8;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);
+    font-family:'Inter',ui-sans-serif,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+    background:
+      radial-gradient(60% 40% at 10% 10%, rgba(255,154,110,.18), transparent 60%),
+      radial-gradient(50% 40% at 92% 16%, rgba(180,133,245,.18), transparent 65%),
+      radial-gradient(70% 50% at 80% 95%, rgba(127,196,232,.18), transparent 60%);}
+  main{position:relative;z-index:1;max-width:1320px;margin:0 auto;padding:56px 40px 100px}
+
+  .serif{font-family:'Fraunces',serif;font-optical-sizing:auto}
+  .mono{font-family:'JetBrains Mono',ui-monospace,monospace}
+
+  .hd{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;
+    padding-bottom:24px;border-bottom:.5px solid var(--line)}
+  .tag{display:inline-flex;align-items:center;gap:6px;font-size:11px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--ink-2);margin-bottom:10px}
+  .tag::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--pop-1);
+    box-shadow:0 0 14px var(--pop-1)}
+  h1{font-family:'Fraunces',serif;font-weight:600;font-size:64px;letter-spacing:-.04em;
+    line-height:.94;margin:0;
+    background:linear-gradient(110deg,#ff7a47 0%,#ff5a90 30%,#8a5fd9 65%,#4090c8 100%);
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  h1 em{font-style:italic;font-weight:400}
+  .lede{color:var(--ink-2);max-width:580px;font-size:14.5px;line-height:1.55;margin:14px 0 0}
+  .meta{font-size:11px;color:var(--ink-3);text-align:right;line-height:1.7;font-variant-numeric:tabular-nums}
+  .meta b{color:var(--ink-2);font-weight:500}
+  .crosslink{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--ink-2);
+    background:#fff;border:.5px solid var(--line);padding:6px 12px;border-radius:999px;
+    text-decoration:none;margin-top:8px}
+  .crosslink:hover{background:var(--paper-2)}
+
+  .toc{display:flex;gap:8px;margin:24px 0 0;flex-wrap:wrap}
+  .toc a{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;
+    border:.5px solid var(--line);font-size:12px;color:var(--ink-2);text-decoration:none;
+    background:#fff;transition:transform .15s ease, background .2s ease}
+  .toc a:hover{transform:translateY(-1px);background:var(--paper-2)}
+  .toc a .sw{width:10px;height:10px;border-radius:50%;box-shadow:0 0 8px currentColor}
+
+  section.fam{margin-top:56px;scroll-margin-top:24px}
+  .fam-hd{display:flex;align-items:baseline;gap:14px;margin-bottom:18px}
+  .fam-hd h2{font-family:'Fraunces',serif;font-weight:500;font-size:30px;letter-spacing:-.02em;margin:0}
+  .fam-hd .nm{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);font-family:'JetBrains Mono',monospace}
+
+  .grid{display:grid;grid-template-columns:1.1fr 1fr;gap:18px}
+  .bg-card{
+    border-radius:18px;overflow:hidden;border:.5px solid var(--line);
+    aspect-ratio:16/10;position:relative;background:#eee;
+    box-shadow:0 1px 0 #fff inset, 0 18px 50px rgba(80,40,120,.14);
+  }
+  .bg-card img{width:100%;height:100%;object-fit:cover;display:block}
+  .bg-card .stamp{
+    position:absolute;left:14px;bottom:14px;
+    font-family:'JetBrains Mono',monospace;font-size:10.5px;color:#fff;
+    background:rgba(0,0,0,.4);padding:4px 9px;border-radius:6px;
+    backdrop-filter:blur(8px);
+  }
+  .bg-card .download{
+    position:absolute;right:14px;top:14px;font-size:11px;color:#fff;
+    background:rgba(0,0,0,.4);padding:4px 9px;border-radius:6px;
+    backdrop-filter:blur(8px);text-decoration:none;
+  }
+  .bg-card .download:hover{background:rgba(0,0,0,.6)}
+
+  .panel{display:flex;flex-direction:column;gap:14px}
+  .pal-card{background:#fff;border:.5px solid var(--line);border-radius:14px;padding:14px}
+  .pal-title{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin:0 0 10px}
+  .ramp{display:grid;grid-template-columns:repeat(8,1fr);gap:4px}
+  .ramp .sw{height:42px;border-radius:7px;border:.5px solid var(--line);position:relative}
+  .ramp .sw .l{position:absolute;left:5px;bottom:3px;font-family:'JetBrains Mono',monospace;
+    font-size:8.5px;color:#fff;background:rgba(0,0,0,.4);padding:1px 4px;border-radius:3px}
+  .pal-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+  .pal-row .hex{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--ink-3)}
+
+  .term{
+    border-radius:14px;overflow:hidden;border:.5px solid var(--line);
+    box-shadow:0 1px 0 rgba(255,255,255,.6) inset, 0 12px 30px rgba(80,40,120,.14);
+    position:relative;
+  }
+  .term .bar{height:28px;display:flex;align-items:center;gap:6px;padding:0 10px;
+    background:rgba(255,255,255,.55);backdrop-filter:blur(10px);border-bottom:.5px solid rgba(0,0,0,.06);
+    font-size:11px;color:rgba(0,0,0,.55);font-family:'JetBrains Mono',monospace;
+    position:relative;z-index:2}
+  .term .bar .dots{display:flex;gap:6px;margin-right:10px}
+  .term .bar .dots i{width:10px;height:10px;border-radius:50%;display:block}
+  .term .bg{position:absolute;inset:28px 0 0 0;z-index:0;background-size:cover;background-position:center}
+  .term .fade{position:absolute;inset:28px 0 0 0;z-index:1;opacity:.7}
+  .term .body{position:relative;z-index:2;padding:14px 16px;
+    font-family:'JetBrains Mono',monospace;font-size:11.5px;line-height:1.55;
+    min-height:240px;}
+  .term .body .l{margin:0}
+  .term .body .pn{opacity:.6}
+
+  .vtabs{display:flex;gap:6px;margin-bottom:10px}
+  .vtab{font-size:11px;padding:5px 12px;border-radius:8px;border:.5px solid var(--line);
+    background:#fff;color:var(--ink-2);cursor:pointer;font-family:inherit}
+  .vtab.on{background:var(--ink);color:#fff;border-color:transparent}
+
+  .install{
+    margin-top:80px;background:linear-gradient(135deg,#ffd9e5,#e8d4f7 50%,#cfe4f5);
+    border-radius:18px;padding:32px;border:.5px solid var(--line);
+  }
+  .install h3{font-family:'Fraunces',serif;font-weight:500;font-size:24px;margin:0 0 6px;letter-spacing:-.02em}
+  .install p{color:var(--ink-2);margin:0 0 14px;font-size:13.5px;line-height:1.6;max-width:700px}
+  .install pre{background:rgba(255,255,255,.7);backdrop-filter:blur(10px);
+    border:.5px solid var(--line);border-radius:10px;padding:14px 16px;
+    font-family:'JetBrains Mono',monospace;font-size:12px;line-height:1.7;margin:0;
+    overflow-x:auto;color:var(--ink)}
+  .install pre .c{color:var(--ink-3)}
+  .install pre .k{color:var(--pop-1)}
+  .install .links{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+  .install .links a{font-size:12px;color:var(--ink);background:#fff;border:.5px solid var(--line);
+    padding:6px 12px;border-radius:8px;text-decoration:none}
+
+  .footnote{margin-top:64px;font-size:11.5px;color:var(--ink-3);text-align:center;letter-spacing:.04em}
+  .footnote .star{color:var(--pop-1)}
+
+  @media (max-width:900px){
+    main{padding:32px 20px 80px}
+    .hd{flex-direction:column;align-items:flex-start;gap:16px}
+    .meta{text-align:left}
+    h1{font-size:42px}
+    .grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+<main>
+  <header class="hd">
+    <div>
+      <div class="tag">y2kdream &nbsp;·&nbsp; euphoria variant</div>
+      <h1>Six <em>euphoric</em> dreams.</h1>
+      <p class="lede">
+        A more vivid sister to y2kdream — saturated coral, electric pink, sage,
+        sunset peach, and dreamy sky blue, mixed in pixel-dreamscape blends.
+        Same six families, cranked up.
+      </p>
+      <a class="crosslink" href="y2kdream-families.html">← back to original (dusty)</a>
+    </div>
+    <div class="meta">
+      <div><b>Variant</b>&nbsp;&nbsp; euphoria</div>
+      <div><b>Families</b>&nbsp;&nbsp; 6</div>
+      <div><b>Themes</b>&nbsp;&nbsp; 12 (light · dark)</div>
+      <div><b>Backgrounds</b>&nbsp;&nbsp; 1600 × 1000 svg</div>
+      <div style="margin-top:8px;color:var(--pop-1)">✦ &nbsp; v1.0 · Apr 30, 2026</div>
+    </div>
+  </header>
+
+  <nav class="toc">
+    <a href="#forest"><span class="sw" style="background:#4a9460;color:#4a9460"></span>Forest</a>
+    <a href="#peach"><span class="sw" style="background:#ff7a47;color:#ff7a47"></span>Peach</a>
+    <a href="#rose"><span class="sw" style="background:#ff5a90;color:#ff5a90"></span>Rose</a>
+    <a href="#butter"><span class="sw" style="background:#e8a830;color:#e8a830"></span>Butter</a>
+    <a href="#lavender"><span class="sw" style="background:#8a5fd9;color:#8a5fd9"></span>Lavender</a>
+    <a href="#sky"><span class="sw" style="background:#4090c8;color:#4090c8"></span>Sky</a>
+    <a href="y2kdream-families.html" style="margin-left:auto">← original</a>
+  </nav>
+
+  <div id="families-root"></div>
+
+  <section class="install">
+    <h3>Install in Warp</h3>
+    <p>Copy the chosen <code>.yaml</code> + the matching <code>.svg</code> background into Warp's themes folder, then pick the theme from Settings → Appearance.</p>
+    <pre><span class="c"># macOS / Linux</span>
+mkdir -p ~/.warp/themes
+cp warp-themes/<span class="k">y2kdream-euphoria-rose-dark.yaml</span> ~/.warp/themes/
+cp backgrounds/<span class="k">euphoria-rose.svg</span> ~/.warp/themes/
+<span class="c"># open Warp → ⌘, → Appearance → Themes → "y2kdream Euphoria Rose Dark"</span></pre>
+    <div class="links">
+      <a href="warp-themes/" target="_blank">📁 warp-themes/</a>
+      <a href="backgrounds/" target="_blank">🖼 backgrounds/</a>
+      <a href="warp-themes/README.md" target="_blank">📄 README.md</a>
+    </div>
+  </section>
+
+  <div class="footnote"><span class="star">✦</span>&nbsp;&nbsp; y2kdream euphoria &nbsp;·&nbsp; turned all the way up &nbsp;&nbsp;<span class="star">✦</span></div>
+</main>
+
+<script>
+  const FAMILIES = [
+    { id:'forest', name:'Forest', desc:'Vivid sage · pixel meadow',
+      light:{ accent:'#4a9460', bg:'#eef7f0', fg:'#1f2e23',
+        ramp:['#eef7f0','#d4ead9','#b3dcbe','#7fb88a','#5fb874','#4a9460','#327048','#1f4a2d'] },
+      dark:{ accent:'#7fd098', bg:'#0f1812', fg:'#e0f0e4',
+        ramp:['#0a120d','#1a2620','#2c3e34','#476554','#638a73','#7fd098','#a3e0b5','#d0eed8'] }
+    },
+    { id:'peach', name:'Peach', desc:'Sunset coral · electric warmth',
+      light:{ accent:'#ff7a47', bg:'#fff5ec', fg:'#3a221a',
+        ramp:['#fff5ec','#ffe4d0','#ffcfae','#ffaa7a','#ff8a55','#ff7a47','#d05a30','#883a1f'] },
+      dark:{ accent:'#ff9a6e', bg:'#1a110c', fg:'#fbe6d4',
+        ramp:['#100905','#241812','#3d2c20','#5e4633','#8a6a4d','#bf8e6c','#e6b08a','#ffd0ad'] }
+    },
+    { id:'rose', name:'Rose', desc:'Electric pink · neon dusk',
+      light:{ accent:'#ff5a90', bg:'#fff0f5', fg:'#3a1d28',
+        ramp:['#fff0f5','#ffd9e5','#ffb8ce','#ff8fb3','#ff7099','#ff5a90','#cf3870','#8a1f4a'] },
+      dark:{ accent:'#ff7eaa', bg:'#191014', fg:'#fbdce6',
+        ramp:['#0f0509','#221518','#3d2530','#5e3a48','#8a5a6f','#bf809a','#e6a3bf','#ffc8da'] }
+    },
+    { id:'butter', name:'Butter', desc:'Saturated gold · sunlit',
+      light:{ accent:'#e8a830', bg:'#fff8e0', fg:'#3a2e10',
+        ramp:['#fff8e0','#fff0b8','#ffe27a','#ffd668','#f5c252','#e8a830','#a87b18','#6f5008'] },
+      dark:{ accent:'#f5c252', bg:'#1a1508', fg:'#fbecbe',
+        ramp:['#100b03','#241d10','#3d3220','#5e4d2f','#8a7245','#bf9c5d','#e6c078','#ffe0a3'] }
+    },
+    { id:'lavender', name:'Lavender', desc:'Electric violet · twilight',
+      light:{ accent:'#8a5fd9', bg:'#f5edfd', fg:'#251a3a',
+        ramp:['#f5edfd','#e3d4f8','#cdb3f0','#b89df0','#a17ee5','#8a5fd9','#5e3aa8','#3a1f6f'] },
+      dark:{ accent:'#b485f5', bg:'#13101a', fg:'#e8dcfb',
+        ramp:['#0a0710','#1d1828','#322545','#4a3a68','#6f5a93','#9078bf','#b29ce6','#d4c5ff'] }
+    },
+    { id:'sky', name:'Sky', desc:'Dreamy blue · open horizon',
+      light:{ accent:'#4090c8', bg:'#ecf4fb', fg:'#152330',
+        ramp:['#ecf4fb','#d2e3f1','#a8cbe5','#7ec4e8','#5fa8da','#4090c8','#2a6e9e','#163f63'] },
+      dark:{ accent:'#6ec0eb', bg:'#0c141c', fg:'#d5e7f3',
+        ramp:['#070b10','#152230','#28394b','#3f5468','#5a7892','#7e9eb8','#a3c0d8','#cbe0ee'] }
+    },
+  ];
+
+  const STOPS = ['50','100','200','300','400','500','700','900'];
+
+  function renderRamp(ramp){
+    return ramp.map((c,i) => `<div class="sw" style="background:${c}" title="${c}"><span class="l">${STOPS[i]}</span></div>`).join('');
+  }
+
+  function renderTermBody(family, mode){
+    const ac = family[mode].accent;
+    const fg = family[mode].fg;
+    const muted = mode === 'dark' ? 'rgba(255,255,255,.55)' : 'rgba(0,0,0,.5)';
+    const link = mode === 'dark' ? '#62acdc' : '#4090c8';
+    const grn  = mode === 'dark' ? '#7fce92' : '#5fb874';
+    return `
+      <p class="l" style="color:${muted}"><span style="color:${ac}">~</span> base &nbsp;<span class="pn">(0.13s)</span></p>
+      <p class="l" style="color:${fg}"><span style="color:${ac}">›</span> ls</p>
+      <p class="l" style="color:${link}">applications &nbsp; configs &nbsp; dev &nbsp; downloads &nbsp; repos &nbsp; snap</p>
+      <p class="l" style="color:${muted};margin-top:8px"><span style="color:${ac}">~</span> base &nbsp;<span class="pn">(0.04s)</span></p>
+      <p class="l" style="color:${fg}"><span style="color:${ac}">›</span> echo "euphoria — ${family.name.toLowerCase()} ${mode}"</p>
+      <p class="l" style="color:${grn}">euphoria — ${family.name.toLowerCase()} ${mode}</p>
+      <p class="l" style="color:${muted};margin-top:8px"><span style="color:${ac}">~</span> base &nbsp;<span class="pn">(0.20s)</span></p>
+      <p class="l" style="color:${fg}"><span style="color:${ac}">›</span> git status</p>
+      <p class="l" style="color:${grn}">nothing to commit, working tree clean</p>
+      <p class="l" style="color:${muted};margin-top:10px">● connected · 2 agents idle</p>
+    `;
+  }
+
+  function renderFamily(f){
+    return `
+    <section class="fam" id="${f.id}">
+      <div class="fam-hd">
+        <h2 class="serif">${f.name}</h2>
+        <span class="nm">euphoria-${f.id} · ${f.desc}</span>
+      </div>
+      <div class="grid">
+        <div class="bg-card">
+          <img src="backgrounds/euphoria-${f.id}.svg" alt="${f.name} background" loading="lazy" />
+          <span class="stamp">backgrounds/euphoria-${f.id}.svg · 1600×1000</span>
+          <a class="download" href="backgrounds/euphoria-${f.id}.svg" download>⬇ svg</a>
+        </div>
+        <div class="panel">
+          <div class="vtabs" data-tabs="${f.id}">
+            <button class="vtab on" data-mode="light">Light</button>
+            <button class="vtab" data-mode="dark">Dark</button>
+          </div>
+          <div class="pal-card">
+            <div class="pal-row">
+              <div class="pal-title" style="margin:0">Palette</div>
+              <span class="hex" data-bind="${f.id}-accent">${f.light.accent}</span>
+            </div>
+            <div class="ramp" data-bind="${f.id}-ramp">${renderRamp(f.light.ramp)}</div>
+            <div style="display:flex;gap:14px;margin-top:10px;font-size:11px;color:var(--ink-3)">
+              <span>bg <span class="mono" data-bind="${f.id}-bg">${f.light.bg}</span></span>
+              <span>fg <span class="mono" data-bind="${f.id}-fg">${f.light.fg}</span></span>
+            </div>
+          </div>
+          <div class="term" data-term="${f.id}">
+            <div class="bar">
+              <span class="dots"><i style="background:${f.light.accent}"></i><i style="background:#e8a830;opacity:.85"></i><i style="background:#5fb874;opacity:.85"></i></span>
+              <span data-bind="${f.id}-name">y2kdream-euphoria-${f.id}-light.yaml</span>
+            </div>
+            <div class="bg" data-bind="${f.id}-img" style="background-image:url('backgrounds/euphoria-${f.id}.svg')"></div>
+            <div class="fade" data-bind="${f.id}-fade" style="background:${f.light.bg};opacity:.7"></div>
+            <div class="body" data-bind="${f.id}-body" style="color:${f.light.fg}">${renderTermBody(f,'light')}</div>
+          </div>
+          <div style="display:flex;gap:8px">
+            <a class="vtab" href="warp-themes/y2kdream-euphoria-${f.id}-light.yaml" download style="text-decoration:none;display:inline-flex;align-items:center;gap:6px">⬇ light .yaml</a>
+            <a class="vtab" href="warp-themes/y2kdream-euphoria-${f.id}-dark.yaml" download style="text-decoration:none;display:inline-flex;align-items:center;gap:6px">⬇ dark .yaml</a>
+          </div>
+        </div>
+      </div>
+    </section>`;
+  }
+
+  document.getElementById('families-root').innerHTML = FAMILIES.map(renderFamily).join('');
+
+  document.querySelectorAll('[data-tabs]').forEach(tabs => {
+    const id = tabs.dataset.tabs;
+    const family = FAMILIES.find(f => f.id === id);
+    tabs.addEventListener('click', e => {
+      const btn = e.target.closest('.vtab');
+      if (!btn) return;
+      const mode = btn.dataset.mode;
+      tabs.querySelectorAll('.vtab').forEach(b => b.classList.toggle('on', b === btn));
+      const v = family[mode];
+      const $ = (k) => document.querySelector(`[data-bind="${id}-${k}"]`);
+      $('accent').textContent = v.accent;
+      $('ramp').innerHTML = renderRamp(v.ramp);
+      $('bg').textContent = v.bg;
+      $('fg').textContent = v.fg;
+      $('name').textContent = `y2kdream-euphoria-${id}-${mode}.yaml`;
+      $('fade').style.background = v.bg;
+      $('fade').style.opacity = mode === 'dark' ? '.78' : '.7';
+      const body = $('body');
+      body.style.color = v.fg;
+      body.innerHTML = renderTermBody(family, mode);
+    });
+  });
+</script>
+</body>
+</html>

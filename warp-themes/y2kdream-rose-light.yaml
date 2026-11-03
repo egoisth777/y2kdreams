@@ -1,0 +1,32 @@
+# y2kdream — Rose (Light)
+# A dreamy, eye-friendly theme inspired by Y2K-era pastel computing.
+# Drop this in: ~/.warp/themes/rose-light.yaml
+# Background image: place "rose.svg" in the same folder.
+
+name: 'y2kdream Rose Light'
+accent: '#d77a87'
+background: '#fbf2f3'
+foreground: '#3d2a2d'
+details: 'lighter'
+background_image:
+  path: 'rose.svg'
+  opacity: 35
+terminal_colors:
+  normal:
+    black:   '#3d2a2d'
+    red:     '#c25d6e'
+    green:   '#7a9266'
+    yellow:  '#c89055'
+    blue:    '#7793b8'
+    magenta: '#b87096'
+    cyan:    '#5fa0a0'
+    white:   '#ecdde0'
+  bright:
+    black:   '#5e4348'
+    red:     '#d97a8a'
+    green:   '#94aa80'
+    yellow:  '#dfa86c'
+    blue:    '#92acce'
+    magenta: '#cc8bae'
+    cyan:    '#7cbcbc'
+    white:   '#fef3f5'

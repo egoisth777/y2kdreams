@@ -1,0 +1,32 @@
+# y2kdream — Butter (Light)
+# A dreamy, eye-friendly theme inspired by Y2K-era pastel computing.
+# Drop this in: ~/.warp/themes/butter-light.yaml
+# Background image: place "butter.svg" in the same folder.
+
+name: 'y2kdream Butter Light'
+accent: '#c8a455'
+background: '#fbf6e8'
+foreground: '#3b3520'
+details: 'lighter'
+background_image:
+  path: 'butter.svg'
+  opacity: 35
+terminal_colors:
+  normal:
+    black:   '#3b3520'
+    red:     '#c25d6e'
+    green:   '#7a9266'
+    yellow:  '#b88d3a'
+    blue:    '#7793b8'
+    magenta: '#a983b8'
+    cyan:    '#5fa0a0'
+    white:   '#e9e0c5'
+  bright:
+    black:   '#5d5238'
+    red:     '#d97a8a'
+    green:   '#94aa80'
+    yellow:  '#d4a352'
+    blue:    '#92acce'
+    magenta: '#c19fd0'
+    cyan:    '#7cbcbc'
+    white:   '#fdf8e6'

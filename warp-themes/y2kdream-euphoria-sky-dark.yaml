@@ -1,0 +1,32 @@
+# y2kdream Euphoria — Sky (Dark)
+# Vibrant pixel-dreamscape variant — saturated y2k euphoria.
+# Drop this in: ~/.warp/themes/y2kdream-euphoria-sky-dark.yaml
+# Background image: place "euphoria-sky.svg" in the same folder.
+
+name: 'y2kdream Euphoria Sky Dark'
+accent: '#6ec0eb'
+background: '#0c141c'
+foreground: '#d5e7f3'
+details: 'darker'
+background_image:
+  path: 'euphoria-sky.svg'
+  opacity: 30
+terminal_colors:
+  normal:
+    black:   '#152230'
+    red:     '#ff5a7e'
+    green:   '#5fb874'
+    yellow:  '#e8a830'
+    blue:    '#4090c8'
+    magenta: '#b760e0'
+    cyan:    '#3fb8b8'
+    white:   '#d5e7f3'
+  bright:
+    black:   '#28394b'
+    red:     '#ff7e98'
+    green:   '#7fce92'
+    yellow:  '#f5c252'
+    blue:    '#62acdc'
+    magenta: '#cb84e8'
+    cyan:    '#5fd2d2'
+    white:   '#e8f2fb'

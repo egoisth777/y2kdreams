@@ -1,0 +1,32 @@
+# y2kdream Euphoria — Forest (Light)
+# Vibrant pixel-dreamscape variant — saturated y2k euphoria.
+# Drop this in: ~/.warp/themes/y2kdream-euphoria-forest-light.yaml
+# Background image: place "euphoria-forest.svg" in the same folder.
+
+name: 'y2kdream Euphoria Forest Light'
+accent: '#4a9460'
+background: '#eef7f0'
+foreground: '#1f2e23'
+details: 'lighter'
+background_image:
+  path: 'euphoria-forest.svg'
+  opacity: 30
+terminal_colors:
+  normal:
+    black:   '#1f2e23'
+    red:     '#ff5a7e'
+    green:   '#5fb874'
+    yellow:  '#e8a830'
+    blue:    '#4090c8'
+    magenta: '#b760e0'
+    cyan:    '#3fb8b8'
+    white:   '#d8e6dc'
+  bright:
+    black:   '#3f5045'
+    red:     '#ff7e98'
+    green:   '#7fce92'
+    yellow:  '#f5c252'
+    blue:    '#62acdc'
+    magenta: '#cb84e8'
+    cyan:    '#5fd2d2'
+    white:   '#f5fbf6'

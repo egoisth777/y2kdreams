@@ -1,0 +1,32 @@
+# y2kdream — Lavender (Light)
+# A dreamy, eye-friendly theme inspired by Y2K-era pastel computing.
+# Drop this in: ~/.warp/themes/lavender-light.yaml
+# Background image: place "lavender.svg" in the same folder.
+
+name: 'y2kdream Lavender Light'
+accent: '#8e72b8'
+background: '#f6f1fa'
+foreground: '#2f2839'
+details: 'lighter'
+background_image:
+  path: 'lavender.svg'
+  opacity: 35
+terminal_colors:
+  normal:
+    black:   '#2f2839'
+    red:     '#c25d6e'
+    green:   '#7a9266'
+    yellow:  '#c8a455'
+    blue:    '#7793b8'
+    magenta: '#9b6fc4'
+    cyan:    '#5fa0a0'
+    white:   '#e2d8eb'
+  bright:
+    black:   '#4f4660'
+    red:     '#d97a8a'
+    green:   '#94aa80'
+    yellow:  '#dfba6c'
+    blue:    '#92acce'
+    magenta: '#b58ad6'
+    cyan:    '#7cbcbc'
+    white:   '#f7f1fc'

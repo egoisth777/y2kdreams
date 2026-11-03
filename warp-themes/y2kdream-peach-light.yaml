@@ -1,0 +1,31 @@
+# y2kdream — Peach (Light)
+# Warm sunset variant — peach blends with butter + rose.
+# Drop this in: ~/.warp/themes/y2kdream-peach-light.yaml
+
+name: 'y2kdream Peach Light'
+accent: '#d98b5e'
+background: '#faf3ec'
+foreground: '#3a3128'
+details: 'lighter'
+background_image:
+  path: 'peach.svg'
+  opacity: 35
+terminal_colors:
+  normal:
+    black:   '#3a3128'
+    red:     '#c25d6e'
+    green:   '#7a9266'
+    yellow:  '#c8a455'
+    blue:    '#7793b8'
+    magenta: '#a983b8'
+    cyan:    '#5fa0a0'
+    white:   '#e8ddd1'
+  bright:
+    black:   '#5a4d40'
+    red:     '#d97a8a'
+    green:   '#94aa80'
+    yellow:  '#dfba6c'
+    blue:    '#92acce'
+    magenta: '#c19fd0'
+    cyan:    '#7cbcbc'
+    white:   '#fdf6ee'

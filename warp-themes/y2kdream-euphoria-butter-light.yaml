@@ -1,0 +1,32 @@
+# y2kdream Euphoria — Butter (Light)
+# Vibrant pixel-dreamscape variant — saturated y2k euphoria.
+# Drop this in: ~/.warp/themes/y2kdream-euphoria-butter-light.yaml
+# Background image: place "euphoria-butter.svg" in the same folder.
+
+name: 'y2kdream Euphoria Butter Light'
+accent: '#e8a830'
+background: '#fff8e0'
+foreground: '#3a2e10'
+details: 'lighter'
+background_image:
+  path: 'euphoria-butter.svg'
+  opacity: 30
+terminal_colors:
+  normal:
+    black:   '#3a2e10'
+    red:     '#ff5a7e'
+    green:   '#5fb874'
+    yellow:  '#e8a830'
+    blue:    '#4090c8'
+    magenta: '#b760e0'
+    cyan:    '#3fb8b8'
+    white:   '#ecdab0'
+  bright:
+    black:   '#5a4820'
+    red:     '#ff7e98'
+    green:   '#7fce92'
+    yellow:  '#f5c252'
+    blue:    '#62acdc'
+    magenta: '#cb84e8'
+    cyan:    '#5fd2d2'
+    white:   '#fffaeb'

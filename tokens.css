@@ -1,0 +1,173 @@
+/* y2kdream — color tokens
+ * Forest + butter + rose + lavender + sky, dusty/eye-friendly saturation
+ * Light + dark (charcoal warm-black with forest accents)
+ *
+ * Hue map (oklch):
+ *   forest ~ 135deg  rose ~ 25deg   butter ~ 85deg
+ *   blush  ~ 10deg   sky  ~ 240deg  lavender ~ 295deg
+ *
+ * All accents share low chroma (0.05–0.09) for that dusty,
+ * sun-bleached y2k mood — not the punchy '99 cyan/magenta.
+ */
+
+:root {
+  /* — base palette (raw, theme-agnostic) — */
+  --y2k-cream-50:   oklch(98.5% 0.012 75);
+  --y2k-cream-100:  oklch(96.8% 0.018 70);
+  --y2k-cream-200:  oklch(94.0% 0.025 65);
+  --y2k-forest-300: oklch(86.0% 0.040 140);
+  --y2k-forest-400: oklch(78.0% 0.055 138);
+  --y2k-forest-500: oklch(68.0% 0.065 135);
+  --y2k-forest-600: oklch(56.0% 0.070 132);
+  --y2k-forest-700: oklch(44.0% 0.065 130);
+
+  --y2k-rose-300:   oklch(86.0% 0.045 20);
+  --y2k-rose-400:   oklch(78.0% 0.065 18);
+  --y2k-rose-500:   oklch(68.5% 0.085 15);
+  --y2k-rose-600:   oklch(58.5% 0.095 12);
+
+  --y2k-butter-300: oklch(92.5% 0.045 95);
+  --y2k-butter-400: oklch(86.0% 0.060 90);
+  --y2k-butter-500: oklch(78.0% 0.075 85);
+
+  --y2k-blush-300:  oklch(89.0% 0.030 10);
+  --y2k-blush-400:  oklch(80.0% 0.045 8);
+
+  --y2k-sky-300:    oklch(86.0% 0.040 235);
+  --y2k-sky-400:    oklch(76.0% 0.060 230);
+  --y2k-sky-500:    oklch(66.0% 0.075 230);
+
+  --y2k-lavender-300: oklch(82.0% 0.045 295);
+  --y2k-lavender-400: oklch(72.0% 0.065 295);
+  --y2k-lavender-500: oklch(60.0% 0.080 295);
+
+  --y2k-ink-900: oklch(22.0% 0.012 50);
+  --y2k-ink-800: oklch(28.0% 0.014 48);
+  --y2k-ink-700: oklch(34.0% 0.016 46);
+  --y2k-ink-600: oklch(44.0% 0.018 44);
+  --y2k-ink-500: oklch(56.0% 0.018 42);
+  --y2k-ink-400: oklch(66.0% 0.018 40);
+}
+
+/* ─────────────  LIGHT  ───────────── */
+:root,
+[data-theme="light"] {
+  /* Backgrounds */
+  --bg:           oklch(97.0% 0.018 65);   /* warm cream */
+  --bg-elevated:  oklch(98.5% 0.014 70);
+  --surface:      oklch(95.0% 0.024 60);   /* peachy panel */
+  --surface-2:    oklch(92.5% 0.030 55);
+  --surface-sunk: oklch(94.0% 0.026 58);
+
+  /* Text */
+  --text:         oklch(28.0% 0.018 45);
+  --text-muted:   oklch(48.0% 0.020 45);
+  --text-subtle:  oklch(62.0% 0.020 45);
+  --text-inverse: oklch(98.0% 0.014 70);
+
+  /* Borders */
+  --border:        oklch(86.0% 0.025 55);
+  --border-strong: oklch(76.0% 0.035 50);
+  --divider:       oklch(90.0% 0.022 55);
+
+  /* Accents */
+  --accent:           var(--y2k-forest-500);
+  --accent-hover:     var(--y2k-forest-600);
+  --accent-soft:      oklch(92.0% 0.035 140);
+  --accent-fg:        oklch(20.0% 0.020 140);   /* on accent */
+
+  --accent-2:         var(--y2k-rose-500);
+  --accent-2-soft:    oklch(92.0% 0.040 18);
+  --accent-3:         var(--y2k-lavender-400);
+  --accent-3-soft:    oklch(93.0% 0.030 295);
+
+  /* Semantic */
+  --success:      oklch(64.0% 0.080 145);
+  --success-soft: oklch(93.0% 0.040 145);
+  --warning:      oklch(74.0% 0.090 80);
+  --warning-soft: oklch(94.0% 0.045 85);
+  --danger:       oklch(62.0% 0.110 25);
+  --danger-soft:  oklch(92.0% 0.050 20);
+  --info:         oklch(66.0% 0.075 235);
+  --info-soft:    oklch(93.0% 0.035 235);
+
+  /* Glass */
+  --glass-bg:     color-mix(in oklch, var(--bg-elevated) 65%, transparent);
+  --glass-border: color-mix(in oklch, white 50%, transparent);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px oklch(40% 0.04 40 / 0.08);
+  --shadow-md: 0 4px 18px oklch(40% 0.04 40 / 0.10), 0 1px 0 white inset;
+  --shadow-lg: 0 18px 60px oklch(40% 0.04 40 / 0.16), 0 1px 0 white inset;
+
+  /* Syntax */
+  --syn-comment:  oklch(64.0% 0.020 50);
+  --syn-keyword:  oklch(56.0% 0.110 12);   /* rose */
+  --syn-string:   oklch(58.0% 0.090 145);  /* dusty green */
+  --syn-number:   oklch(58.0% 0.090 50);   /* warm orange */
+  --syn-function: oklch(54.0% 0.110 295);  /* lavender */
+  --syn-prop:     oklch(50.0% 0.090 230);  /* sky */
+  --syn-tag:      oklch(58.0% 0.105 30);
+  --syn-punct:    oklch(58.0% 0.020 50);
+  --syn-var:      oklch(36.0% 0.020 50);
+}
+
+/* ─────────────  DARK  ───────────── */
+[data-theme="dark"] {
+  /* Backgrounds — warm charcoal, never blue-black */
+  --bg:           oklch(18.5% 0.012 50);
+  --bg-elevated:  oklch(22.5% 0.014 48);
+  --surface:      oklch(25.0% 0.016 46);
+  --surface-2:    oklch(29.0% 0.018 44);
+  --surface-sunk: oklch(15.5% 0.010 50);
+
+  /* Text */
+  --text:         oklch(94.0% 0.018 70);
+  --text-muted:   oklch(74.0% 0.020 60);
+  --text-subtle:  oklch(58.0% 0.018 55);
+  --text-inverse: oklch(22.0% 0.014 48);
+
+  /* Borders */
+  --border:        oklch(34.0% 0.018 50);
+  --border-strong: oklch(46.0% 0.020 48);
+  --divider:       oklch(28.0% 0.014 50);
+
+  /* Accents — forest pop on charcoal */
+  --accent:        oklch(80.0% 0.060 138);
+  --accent-hover:  oklch(86.0% 0.055 138);
+  --accent-soft:   oklch(32.0% 0.035 138);
+  --accent-fg:     oklch(18.0% 0.018 45);
+
+  --accent-2:      oklch(78.0% 0.075 18);
+  --accent-2-soft: oklch(30.0% 0.045 18);
+  --accent-3:      oklch(80.0% 0.060 295);
+  --accent-3-soft: oklch(30.0% 0.040 295);
+
+  /* Semantic */
+  --success:      oklch(76.0% 0.080 145);
+  --success-soft: oklch(28.0% 0.040 145);
+  --warning:      oklch(84.0% 0.090 85);
+  --warning-soft: oklch(30.0% 0.045 85);
+  --danger:       oklch(76.0% 0.100 22);
+  --danger-soft:  oklch(28.0% 0.050 20);
+  --info:         oklch(78.0% 0.075 235);
+  --info-soft:    oklch(28.0% 0.040 235);
+
+  --glass-bg:     color-mix(in oklch, var(--bg-elevated) 60%, transparent);
+  --glass-border: color-mix(in oklch, white 12%, transparent);
+
+  --shadow-sm: 0 1px 2px oklch(0% 0 0 / 0.40);
+  --shadow-md: 0 4px 18px oklch(0% 0 0 / 0.45), 0 1px 0 oklch(100% 0 0 / 0.04) inset;
+  --shadow-lg: 0 24px 60px oklch(0% 0 0 / 0.55), 0 1px 0 oklch(100% 0 0 / 0.05) inset;
+
+  /* Syntax */
+  --syn-comment:  oklch(56.0% 0.020 50);
+  --syn-keyword:  oklch(80.0% 0.090 18);
+  --syn-string:   oklch(82.0% 0.075 140);
+  --syn-number:   oklch(85.0% 0.085 55);
+  --syn-function: oklch(80.0% 0.075 295);
+  --syn-prop:     oklch(82.0% 0.070 235);
+  --syn-tag:      oklch(82.0% 0.085 30);
+  --syn-punct:    oklch(64.0% 0.020 50);
+  --syn-var:      oklch(90.0% 0.018 60);
+}

@@ -1,0 +1,16 @@
+# Sub-repos cloned inside this directory for development convenience.
+# Each is its own git repo with its own remote.
+
+# Knowledge base (private remote: egoisth777/y2kdreams-inst)
+/inst/
+
+# Plugin under test (public remote: egoisth777/y2kdream-nvim)
+/y2kdream-nvim/
+
+# Slim test config (private remote: egoisth777/nvim-cfg-test)
+/nvim-cfg-test/
+
+# Defensive: anything else with a .git directory at depth 1 is a sub-repo
+# and should not be tracked by the parent. Listed explicitly above so the
+# intent is auditable, but the pattern below catches stragglers if a future
+# clone lands here without being added above.

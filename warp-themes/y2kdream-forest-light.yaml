@@ -1,0 +1,32 @@
+# y2kdream — Forest (Light)
+# A dusty sage variant — warm green nostalgia, blends with butter + rose.
+# Drop this in: ~/.warp/themes/y2kdream-forest-light.yaml
+# Background image: place "forest.svg" in the same folder.
+
+name: 'y2kdream Forest Light'
+accent: '#7a9266'
+background: '#f4f7ec'
+foreground: '#2d342a'
+details: 'lighter'
+background_image:
+  path: 'forest.svg'
+  opacity: 35
+terminal_colors:
+  normal:
+    black:   '#2d342a'
+    red:     '#c25d6e'
+    green:   '#6a8255'
+    yellow:  '#c8a455'
+    blue:    '#7793b8'
+    magenta: '#a983b8'
+    cyan:    '#5fa0a0'
+    white:   '#dfe5d3'
+  bright:
+    black:   '#4d553f'
+    red:     '#d97a8a'
+    green:   '#85a070'
+    yellow:  '#dfba6c'
+    blue:    '#92acce'
+    magenta: '#c19fd0'
+    cyan:    '#7cbcbc'
+    white:   '#f6f9ee'
